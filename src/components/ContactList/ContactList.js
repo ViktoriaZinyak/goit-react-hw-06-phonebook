@@ -8,11 +8,11 @@ import { Contact } from '../Contact/Contact';
 export const ContactList = () => {
   const contacts = useSelector(getContacts);
   const filterValue = useSelector(getFilter);
-  console.log(contacts);
+
   const visiableContacts = contacts.filter(({ name }) =>
     name.toLowerCase().includes(filterValue)
   );
-
+  console.log(filterValue);
   // const visibleTasks = getVisibleTasks(tasks, statusFilter);
   return (
     <ul>

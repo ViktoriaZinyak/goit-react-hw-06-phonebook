@@ -6,7 +6,7 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   const onChange = e => {
-    dispatch(setFilter(e.currentTarget.value));
+    dispatch(setFilter(e.currentTarget.value.toLowerCase().trim()));
   };
 
   return (
