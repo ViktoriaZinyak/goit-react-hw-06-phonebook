@@ -12,8 +12,8 @@ const ContactForm = () => {
     const form = event.target;
     const name = form.elements.name.value;
     const number = form.elements.number.value;
-    contacts.find(contact => contact.name === form.elements.name.value)
-      ? alert(`${form.elements.name.value} is already in contacts`)
+    contacts.find(contact => contact.name === name)
+      ? alert(`${name} is already in contacts`)
       : dispatch(addContact(name, number));
     form.reset();
   };
